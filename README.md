@@ -14,10 +14,8 @@ Welcome to **Ultimate Learning Hub**, an interactive platform that provides lear
 
 ## Live Demo
 
-You can view a live demo of this project [[coursepageclone.netlify.app](https://coursepageclone.netlify.app/)](#).
+ [[coursepageclone.netlify.app](https://coursepageclone.netlify.app/)](#).
 
-## Getting Started
 
-To get started with **Ultimate Learning Hub**, follow these steps:
 
 
