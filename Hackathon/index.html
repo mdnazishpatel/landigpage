@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera Reproduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+     
+       
+    </style>
+</head>
+<body>
+   
+    <header class="navbar bg-blue-600 p-4 flex justify-between items-center shadow-lg">
+        <div class="logo text-white text-3xl font-bold">
+            <a href="#">Coursera</a>
+        </div>
+        <nav>
+            <div class="burger-icon" id="burgerIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="navLinks" class="flex space-x-6 text-white font-semibold">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Certificates</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section id="hero" class="hero-section bg-blue-600 text-white py-20 text-center hero-text">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Start Learning Today</h1>
+            <p class="text-xl md:text-2xl mb-6">Explore the world's best online courses from top universities and institutions.</p>
+            <button class="cta-btn bg-yellow-400 text-lg text-black py-3 px-10 rounded-full hover:bg-yellow-500 transition duration-300">Browse Courses</button>
+        </div>
+    </section>
+
+  
+    <section id="courses" class="py-16 px-6 md:px-12 bg-gray-50">
+        <h2 class="text-center text-3xl font-semibold mb-12">Popular Courses</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="course-card bg-white shadow-lg p-6 rounded-lg transition-all">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJ3oPLlvDxPifRISu3BTVi9RzZ6mKhGrIP5NVGnmLAwGcBl7rtPKROcPbCU4q7QIIerg&usqp=CAU" alt="Course Image" class="w-full rounded-md mb-4 transition-all">
+                <h3 class="text-xl font-semibold mb-2">Data Science</h3>
+                <p class="text-gray-600 mb-4">Learn data science from scratch. Perfect for beginners!</p>
+                <button class="cta-btn bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Explore</button>
+            </div>
+            <div class="course-card bg-white shadow-lg p-6 rounded-lg transition-all">
+                <img src="https://epe.brightspotcdn.com/4c/74/d9e7b9a84630900daef9e16c6aac/ideas-share-507273299-02.jpg" alt="Course Image" class="w-full rounded-md mb-4 transition-all">
+                <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+                <p class="text-gray-600 mb-4">Master machine learning algorithms and techniques.</p>
+                <button class="cta-btn bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Explore</button>
+            </div>
+            <div class="course-card bg-white shadow-lg p-6 rounded-lg transition-all">
+                <img src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/2000xAny/0/5/3/507053_teamworkpuzzleillustration_shutterstock_1518160778_513256.jpg" alt="Course Image" class="w-full rounded-md mb-4 transition-all">
+                <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                <p class="text-gray-600 mb-4">Learn full-stack web development from scratch.</p>
+                <button class="cta-btn bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Explore</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 Coursera Clone. All Rights Reserved.</p>
+    </footer>
+
+
+    <button id="darkModeToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+            <path d="M8 0a7.999 7.999 0 0 1 7.8 6.053A5.003 5.003 0 1 1 9 14a5.003 5.003 0 0 1 5-5c-.19-1.083-.612-2.105-1.215-2.967A7.963 7.963 0 0 1 8 0zm0 1a6.978 6.978 0 0 0-6.8 5.2c.57-.246 1.227-.4 1.9-.4a5.978 5.978 0 1 1 5.8 7.8 6.978 6.978 0 0 0-.3-12z"/>
+        </svg>
+    </button>
+
+    <script>
+
+        const toggleButton = document.getElementById("darkModeToggle");
+        const body = document.body;
+
+        toggleButton.addEventListener("click", () => {
+            body.classList.toggle("dark");
+        });
+
+        
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add("dark");
+        }
+
+
+        const burgerIcon = document.getElementById('burgerIcon');
+        const navLinks = document.getElementById('navLinks');
+
+        burgerIcon.addEventListener('click', () => {
+            burgerIcon.classList.toggle('open');
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
